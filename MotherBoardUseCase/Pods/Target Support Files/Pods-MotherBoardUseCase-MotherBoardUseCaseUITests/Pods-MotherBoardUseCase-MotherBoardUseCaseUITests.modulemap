@@ -1,0 +1,6 @@
+framework module Pods_MotherBoardUseCase_MotherBoardUseCaseUITests {
+  umbrella header "Pods-MotherBoardUseCase-MotherBoardUseCaseUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

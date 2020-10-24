@@ -1,0 +1,37 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+def rx
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxRealm'
+  pod 'RxDataSources'
+  pod 'Action'
+  pod 'RxSwiftExt'
+  pod 'RxOptional'
+end
+
+def architecture
+  pod 'RIBs', :git => 'https://github.com/uber/RIBs.git', :branch => 'master'
+  pod 'Boardy'
+end
+
+target 'MotherBoardUseCase' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  rx
+  architecture
+
+  # Pods for MotherBoardUseCase
+
+  target 'MotherBoardUseCaseTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MotherBoardUseCaseUITests' do
+    # Pods for testing
+  end
+
+end
